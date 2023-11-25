@@ -7,6 +7,12 @@
     <!-- <script src="https://red-track.net/uniclick.js?attribution=lastpaid&cookiedomain=po.trade&cookieduration=90&defaultcampaignid=65553e9b3df94c0001af7765&regviewonce=false"></script> -->
     <script src="https://red-track.net/unilpclick.js?attribution=lastpaid&cookiedomain=po.trade&cookieduration=90&defaultcampaignid=65553e9b3df94c0001af7765&regviewonce=false"></script>
     <script src="https://red-track.net/uniprelpclick.js?attribution=lastpaid&cookiedomain=po.trade&cookieduration=90&defaultcampaignid=65553e9b3df94c0001af7765&regviewonce=false"></script>
+    <script
+        async
+        src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs-pro@3/dist/fp.min.js"
+        onload="initFingerprintJS()"
+        >
+    </script>
 </head>
 <body>
     <h1>This is the test website for Red Track!</h1>
@@ -19,5 +25,12 @@
     <div>
         <a href="https://red-track.net/preclick">Test Link For Red Track / Pre-LP click</a>
     </div>
+    <script>
+        function initFingerprintJS() {
+          FingerprintJS.load({apiKey: 'LFp50RviN85WPOeILAoA'})
+            .then(fp => fp.get())
+            .then(result => console.log(result.visitorId));
+        }
+    </script>
 </body>
 </html>
